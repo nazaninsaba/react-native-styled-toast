@@ -210,7 +210,7 @@ export const Toast: React.FC<ToastConfig & ToastInternalConfig> = ({
       )}
       <Box alignItems="flex-start" flex={1} pl={hideIcon ? 4 : 0} pr={!!subMessage ? 2 : 0} py={2}>
         <Box flexDirection="row" flexWrap="wrap" flex={1}>
-           <Text color={color} style={{ fontFamily:regular, fontSize:14}} allowFontScaling={allowFontScaling}>
+           <Text color={color} style={{ fontFamily:"regular", fontSize:14}} allowFontScaling={allowFontScaling}>
             {message}
           </Text>
         </Box>
