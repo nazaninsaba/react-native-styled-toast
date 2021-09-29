@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Animated, TouchableOpacity, Vibration } from 'react-native'
+import { Animated, TouchableOpacity, Vibration, Text } from 'react-native'
 import { getStatusBarHeight } from 'react-native-status-bar-height'
 import Box, { BoxProps } from '../Box'
 import Icon from '../Icon'
@@ -210,9 +210,9 @@ export const Toast: React.FC<ToastConfig & ToastInternalConfig> = ({
       )}
       <Box alignItems="flex-start" flex={1} pl={hideIcon ? 4 : 0} pr={!!subMessage ? 2 : 0} py={2}>
         <Box flexDirection="row" flexWrap="wrap" flex={1}>
-          <Heading color={color} {...messageProps} allowFontScaling={allowFontScaling}>
+           <Text color={color} style={{ fontFamily:regular, fontSize:14}} allowFontScaling={allowFontScaling}>
             {message}
-          </Heading>
+          </Text>
         </Box>
         {!!subMessage && (
           <SubText color={color} mt={1} {...subMessageProps} allowFontScaling={allowFontScaling}>
